@@ -1,0 +1,95 @@
+1. git version - 看版本號
+
+2. 設定全域的使用者與mail (不一定要是真實的姓名與mail) 
+git config --global user.name nina
+git config --global user.email shuanshuankao1222@gmail.com
+git config --list
+
+3. 初始化倉庫
+git init
+
+4. 倉庫狀態
+git status (控管狀態)
+
+5. 加入控管(暫存區)
+git add filename
+git add . (所有變動一次確認)
+
+6. 其餘狀態
+U -> Untrack (不被控管)
+U -> A (Added 加入控管) 
+A -> M (Modified 修改過的)
+A -> D (Deleted 刪除)
+
+7. 刪除後恢復
+git restore filename
+
+8. 檢視暫存區
+git ls-files -s
+
+9. 檢視 object
+git cat-file -t  shal(編碼前六碼) -> 看型態
+git cat-file -p shal(編碼前六碼) -> 看內容
+* shal -> 編碼的縮寫
+
+10. 加入倉庫
+git commit -m "此為自己想註記的敘述"
+git commit -am "此為自己想註記的敘述"
+* " -am " => add+message 
+
+11. 檢視倉庫狀態
+git log
+git log --oneline (簡化資訊為一行)
+git log --graph (圖形化)
+
+12. 暫存區檔案恢復工作目錄
+git restore --staged filename
+
+13. 強制刪除(remove)
+git rm -f filename
+
+14. 倉庫區檔案恢復工作目錄
+git rm --cached filename
+
+15. 產生分支
+git branch name(自己取)
+
+16. 檢視分支
+git branch
+
+17. 切換分支 
+git checkout name(自己取)
+
+18. 捨棄變更 
+git checkout .
+
+19. 合併分支
+git checkout master => 合併回原本的主分支
+git merge test
+
+20. 合併問題?
+git add .
+git commit -m "完成合併衝突確認"
+
+21. 刪除分支
+git branch -D test
+
+22. VIM編輯器用法
+1. 使用 git commit 進入
+2. 使用 i 進入編輯模式
+3. 書寫完畢後使用 esc 鍵切換到下方命令列
+4. 輸入: wq 離開 (write+quit)
+
+23. 程式練習
+增加3個檔案跟commit log
+
+24. 切換commit -log
+git checkout 前6碼
+git checkout master => 最後切回原本分支
+
+25. 重置到某一個 commit - log
+git reset 前6碼
+git reset --hard 前6碼  ===> 做法比較暴力
+
+26. 檢視所有的歷程
+git reflog
