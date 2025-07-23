@@ -105,3 +105,7 @@ git push
 
 30. 複製專案
 git clone 已綁定github網址
+
+31. git checkout -b test (新增切換一次完成)
+- git branch test
+- git checkout test
