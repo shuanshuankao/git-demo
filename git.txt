@@ -100,7 +100,7 @@ git remote add origin https://github.com/shuanshuankao/git-demo.git
 28. 檢視綁定的雲端網址
 git remote -v
 
-29. 推送到雲端
+29. 本地端推送到雲端
 git push
 
 30. 複製專案
@@ -109,3 +109,15 @@ git clone 已綁定github網址
 31. git checkout -b test (新增切換一次完成)
 - git branch test
 - git checkout test
+
+32. 雲端同步到本地端
+git pull
+
+33. 刪除雲端分支
+git push --delete origin test
+
+34. 合併上一次的 commit log
+git commit --amend
+
+35. 強制推送
+git push -f
